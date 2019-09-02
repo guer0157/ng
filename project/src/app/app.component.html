@@ -2,9 +2,12 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <app-header></app-header>
-      <app-recipe-list></app-recipe-list>
-      <app-shopping-list></app-shopping-list>
+      <app-header
+        (shoppingList)="shoppingList()"
+        (showRecipeList)="showRecipeList()"
+      ></app-header>
+      <app-recipe-list *ngIf="!isShoppingListActive"></app-recipe-list>
+      <app-shopping-list *ngIf="isShoppingListActive"></app-shopping-list>
     </div>
   </div>
 </div>
