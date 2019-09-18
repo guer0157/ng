@@ -2,8 +2,15 @@
   <div class="row">
     <div class="col-xs-12 col-md-offset-2">
       <app-active-users></app-active-users>
+      <h4>Active -> Inactive</h4>
+      <h5>
+        <strong>{{ isInactive }}</strong>
+      </h5>
       <app-inactive-users></app-inactive-users>
+      <h4>Inactive -> Active</h4>
+      <h5>
+        <strong>{{ isActive }}</strong>
+      </h5>
     </div>
-    <h5>{{ clickCounter }}</h5>
   </div>
 </div>

@@ -7,12 +7,13 @@ import { CounterService } from "./counter.service";
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent implements OnInit {
-  clickCounter: number = 0;
+  isActive: number = 0;
+  isInactive: number = 0;
   constructor(private counterService: CounterService) {}
   ngOnInit() {
     this.counterService.counterEmmiter.subscribe(() => {
-      console.log("this.clickCounter");
-      return (this.clickCounter = this.clickCounter + 1);
+      this.isActive = this.counterService.ToActiveclickCounter;
+      this.isInactive = this.counterService.ToInactiveclickCounter;
     });
   }
 }

@@ -19,6 +19,7 @@ export class ActiveUsersComponent implements OnInit {
   }
   setToInactive(index: number, user: string) {
     this.userService.setToInactive(index, user);
-    this.counterService.counterEmmiter.emit();
+    // this.counterService.counterEmmiter.emit(false);
+    this.counterService.checkCount(false);
   }
 }
